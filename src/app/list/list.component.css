@@ -1,0 +1,11 @@
+mat-card {
+    align-content: center;
+    width: 450px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+img {
+    border-radius: 50%;
+
+}

@@ -1,10 +1,16 @@
 <div class="example-container">
   <mat-form-field>
-    <input matInput placeholder="Name">
+    <input #User type="text" matInput placeholder="Name">
   </mat-form-field>
-
   <mat-form-field>
-    <textarea matInput placeholder="Chirp Message"></textarea>
+    <input #UserName type="text" matInput placeholder="User Name">
   </mat-form-field>
-  <a class="button" routerLink="/list" routerlinkActive="active">Chirps</a>
+  <mat-form-field  hintLabel="Must be a number">
+    <input #ID type="number" matInput placeholder="ID #">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea #Message type="text" matInput placeholder="Chirp Message"></textarea>
+  </mat-form-field>
+  <a class="button" id="b" (click)="sendChirp(User.value, UserName.value, ID.value, Message.value)" >Send Chirp!</a>
+  <!-- <a class="button" routerLink="/list" routerlinkActive="active">Chirps List</a> -->
 </div>

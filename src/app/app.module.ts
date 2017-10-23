@@ -13,13 +13,19 @@ import { SingleComponent } from './single/single.component';
 import { ChirpFormComponent } from './chirp-form/chirp-form.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { ListViewComponent } from './list-view/list-view.component';
+import { SingleViewComponent } from './single-view/single-view.component';
+import { FormViewComponent } from './form-view/form-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     SingleComponent,
-    ChirpFormComponent
+    ChirpFormComponent,
+    ListViewComponent,
+    SingleViewComponent,
+    FormViewComponent
   ],
   imports: [
     AppRoutingModule,

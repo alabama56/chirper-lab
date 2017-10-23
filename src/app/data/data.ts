@@ -58,7 +58,7 @@ export const Chirps: Array<IChirp> = [
 ]
 
 export interface IChirp {
-    img: string;
+    img?: string;
     user: string;
     username: string;
     id: number;

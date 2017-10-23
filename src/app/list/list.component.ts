@@ -7,8 +7,7 @@ import { ChirpService } from '../chirp.service';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css'],
-  providers: [ChirpService]
+  styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
   chirps: IChirp[];

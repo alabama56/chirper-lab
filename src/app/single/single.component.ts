@@ -12,7 +12,7 @@ import { ChirpService } from '../chirp.service';
   styleUrls: ['./single.component.css']
 })
 export class SingleComponent implements OnInit {
-  @Input() chirp: IChirp;
+  chirp: IChirp;
 
   constructor(
     private chirpService: ChirpService,

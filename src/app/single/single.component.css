@@ -1,0 +1,38 @@
+.back {
+    margin: 20px 0;
+    font-family: Arial;
+    font-size: 16px;
+    background-color: #775877;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer; cursor: hand;
+    color: black;
+}
+
+.back:hover {
+    background-color: #cfd8dc;
+}
+
+.back:disabled {
+    background-color: #eee;
+    color: #ccc; 
+    cursor: auto;
+}
+
+mat-card {
+    align-content: center;
+    width: 450px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border-radius: 50%;
+
+}

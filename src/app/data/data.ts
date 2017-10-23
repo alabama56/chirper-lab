@@ -37,7 +37,7 @@ export const Chirps: Array<IChirp> = [
     {
         img: "http://static.snopes.com/app/uploads/2007/08/star-wars-c-3po-sixth-scale-feature-21711-865x452.jpg",
         user: "C-3PO",
-        username: "i-c-u-3-po",
+        username: "i-c-u-3-p-o",
         id: 6,
         message: "I do believe there is a civalized solution to this, oh my."
     },
@@ -52,7 +52,7 @@ export const Chirps: Array<IChirp> = [
         img: "https://upload.wikimedia.org/wikipedia/en/9/9b/Luke_Skywalker.png",
         user: "Luke Skywalke",
         username: "who_is_my_dad",
-        id: 7,
+        id: 8,
         message: "Hey guys, don't forget about me!"
     }
 ]

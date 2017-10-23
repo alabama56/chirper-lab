@@ -1,9 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<div class="menu">
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button routerLink="/list" mat-menu-item>Chirps List</button>
+      <button routerLink="/form" mat-menu-item>Send a Chrip</button>
+    </mat-menu>
+</div>
 <div style="text-align:center">
   <h1>
     Welcome to {{title}}!
   </h1>
-  <img width="300" src="http://chirpers.io/images/chirpers_notext.png">
+  <img width="300" src="http://www.downloadclipart.net/svg/10455-purple-bird-svg.svg">
 
   <router-outlet></router-outlet>
 </div>

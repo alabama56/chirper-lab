@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule }    from '@angular/forms';
 import { MatFormFieldModule, MatInputModule, MatSelectModule, MatCardModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatMenuModule} from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatMenuModule} from '@angular/material';
 
 
 import { ChirpService } from './chirp.service';

@@ -18,8 +18,6 @@ export class ChirpService {
                 resolve(Chirps);
                 return;
             } 
-
-         
             resolve(this.chirps);
         });
            
@@ -27,12 +25,11 @@ export class ChirpService {
 
     getChirp(id: number): Promise<IChirp> {
         return this.getChirps()
-                   .then((chirps) => {
-                    
-                       return chirps.find(chirp => chirp.id === id);
-                    })
-                    .then((chirp) => {
-                        return chirp;
-                    });
+            .then((chirps) => {
+                return chirps.find(chirp => chirp.id === id);
+            })
+            .then((chirp) => {
+                return chirp;
+            });
     }
 }

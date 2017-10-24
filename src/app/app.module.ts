@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }    from '@angular/forms';
-import { MatFormFieldModule, MatInputModule, MatSelectModule, MatCardModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule }    from '@angular/forms';
+import { MatFormFieldModule, MatInputModule, MatSelectModule, MatCardModule, MatIconModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule, MatMenuModule} from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatExpansionModule } from '@angular/material';
+import { MatStepperModule } from '@angular/material';
 
 
 import { ChirpService } from './chirp.service';
@@ -16,6 +17,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { ListViewComponent } from './list-view/list-view.component';
 import { SingleViewComponent } from './single-view/single-view.component';
 import { FormViewComponent } from './form-view/form-view.component';
+import { LogInComponent } from './log-in/log-in.component';
+import { LogInViewComponent } from './log-in-view/log-in-view.component';
+import { ActualLogComponent } from './actual-log/actual-log.component';
+import { ActualLogViewComponent } from './actual-log-view/actual-log-view.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +31,11 @@ import { FormViewComponent } from './form-view/form-view.component';
     ChirpFormComponent,
     ListViewComponent,
     SingleViewComponent,
-    FormViewComponent
+    FormViewComponent,
+    LogInComponent,
+    LogInViewComponent,
+    ActualLogComponent,
+    ActualLogViewComponent
   ],
   imports: [
     AppRoutingModule,
@@ -38,7 +48,11 @@ import { FormViewComponent } from './form-view/form-view.component';
     MatCheckboxModule,
     MatSelectModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatExpansionModule,
+    MatIconModule,
+    MatStepperModule,
+    ReactiveFormsModule 
   ],
   providers: [ChirpService],
   bootstrap: [AppComponent]

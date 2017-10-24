@@ -1,9 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="menu">
-    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <button [matMenuTriggerFor]="menu" mat-icon-button color="primary">
+      <mat-icon >menu</mat-icon>
+    </button>
     <mat-menu #menu="matMenu">
       <button routerLink="/list" mat-menu-item>Chirps List</button>
       <button routerLink="/form" mat-menu-item>Send a Chrip</button>
+      <button routerLink="/log" mat-menu-item>Sign Up or Log In</button>
     </mat-menu>
 </div>
 <div style="text-align:center">

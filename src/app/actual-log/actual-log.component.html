@@ -1,0 +1,40 @@
+<h1>Log In</h1>
+
+<mat-horizontal-stepper [linear]="isLinear">
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Name</ng-template>
+      <mat-form-field>
+        <input #User matInput type="text" placeholder="Name">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input #Username matInput type="text"  placeholder="Username">
+      </mat-form-field>
+      <div>
+        <button  mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Password</ng-template>
+      <mat-form-field>
+        <input #Password type="password" matInput placeholder="Password">
+      </mat-form-field>
+
+      <div>
+        <button color="accent" mat-button matStepperPrevious>Back</button>
+        <button  mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+ 
+  <mat-step>
+    <ng-template matStepLabel>Finished</ng-template>
+    <div>
+      <button  mat-button matStepperPrevious>Log In</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
+<a class="button"routerLink="/list" routerlinkActive="active">Chirps List!</a>

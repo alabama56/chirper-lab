@@ -1,4 +1,4 @@
-.example-container {
+/* .example-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,5 +9,27 @@
   
 .example-container > * {
     width: 50%;
-}
+} */
 
+mat-card {
+    width: 750px;
+    margin: 0 auto;
+    background-color: #775877;
+    border-radius: 25px;
+   
+}
+button {
+    margin-top: 2em;
+}
+mat-form-field, label {
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+}
+form {
+    text-align: center; 
+
+    
+
+   
+}

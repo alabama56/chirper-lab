@@ -1,4 +1,6 @@
-
+h1 {
+    margin-top: 0;
+}
 
 img {
     margin-bottom: 2em;
@@ -6,6 +8,7 @@ img {
 
 .menu {
     color: plum;
+    
 }
 
 mat-menu button {

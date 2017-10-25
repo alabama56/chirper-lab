@@ -11,7 +11,7 @@ export class ChirpService {
 
     getChirps(): Promise<IChirp[]> {
         return new Promise<Array<IChirp>>((resolve, reject) => {
-            if (this.chirps.length === 0){
+            if (this.chirps.length === 0 ){
              
                 this.chirps = Chirps;
              

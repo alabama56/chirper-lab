@@ -33,8 +33,10 @@
   <mat-step>
     <ng-template matStepLabel>Finished</ng-template>
     <div>
+      <button color="accent" mat-button matStepperPrevious>Back</button>
       <button  mat-button matStepperPrevious>Log In</button>
     </div>
   </mat-step>
 </mat-horizontal-stepper>
+<a class="button"routerLink="/log" routerlinkActive="active">Sign Up</a>
 <a class="button"routerLink="/list" routerlinkActive="active">Chirps List!</a>

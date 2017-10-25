@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule }    from '@angular/forms';
 import { MatFormFieldModule, MatInputModule, MatSelectModule, MatCardModule, MatIconModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatExpansionModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatExpansionModule, MatRadioModule } from '@angular/material';
 import { MatStepperModule } from '@angular/material';
 
 
@@ -52,7 +52,8 @@ import { ActualLogViewComponent } from './actual-log-view/actual-log-view.compon
     MatExpansionModule,
     MatIconModule,
     MatStepperModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    MatRadioModule 
   ],
   providers: [ChirpService],
   bootstrap: [AppComponent]

@@ -28,6 +28,6 @@ export class SingleComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
-}
+  }
 
 }

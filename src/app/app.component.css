@@ -1,16 +1,24 @@
-h1 {
-    margin-top: 0;
+mat-toolbar {
+    margin: 0 auto;
+    z-index: 2;
+}
+
+mat-toolbar h1 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 36px;
+    color: white;
 }
 
 img {
     margin-bottom: 2em;
 }
 
+/* .main {
+    padding-top: 10px;
+} */
+
 .menu {
     color: plum;
     
 }
 
-mat-menu button {
-    color: plum; 
-}

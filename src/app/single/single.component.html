@@ -1,19 +1,24 @@
-<mat-card *ngIf="!!chirp" class="example-card">
-  <mat-card-header>
-    <img mat-card-avatar src="{{chirp.img}}">
-    <mat-card-title>{{chirp.user}}</mat-card-title>
-    <mat-card-subtitle>{{chirp.username}}</mat-card-subtitle>
-  </mat-card-header>
 
+<ng-container *ngIf="!!chirp">
+    <h1>{{chirp.user}} Says...</h1>
+  <mat-card  appBackgroundColor class="example-card">
+
+    <mat-card-header>
+      <img mat-card-avatar src="{{chirp.img}}">
+      <mat-card-title>{{chirp.user}}</mat-card-title>
+      <mat-card-subtitle>{{chirp.username | username}}</mat-card-subtitle>
+    </mat-card-header>
+
+    
   
- 
-  <p>{{chirp.message}}</p>
+    <p>{{chirp.message}}</p>
 
-  <mat-card-actions>
-    <button mat-icon-button color="primary">
-      <mat-icon >favorite</mat-icon>
-    </button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-</mat-card>
+    <mat-card-actions>
+      <button mat-icon-button color="primary">
+        <mat-icon >favorite</mat-icon>
+      </button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</ng-container>
 <a class="button" (click)="goBack()">Back</a>

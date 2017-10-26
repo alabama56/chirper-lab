@@ -40,16 +40,12 @@ export class ChirpFormComponent implements OnInit {
   myNewChirp: EventEmitter<IChirp> = new EventEmitter<IChirp>();
 
   sendChirp(){
-    let num = Math.floor(Math.random() * 10000 )
-    let newChirp = {img: "assets/img-thing.jpeg", user: this.form.value.user , username: this.form.value.username, id: num, message: this.form.value.message };
-
-
     if (this.form.status !== 'VALID'){
       alert("You must fill in all input boxes to send a Chrip");
       this.router.navigate(['/form'])
     }else {
-      console.log(newChirp)
-      this.svc.chirps.unshift(newChirp);
+      
+      this.svc.configureAndSetChirp(this.form.value);
       this.router.navigate(['/list'])
     }
   }

@@ -9,27 +9,36 @@ export class ChirpService {
         
     }
 
+    initializeChirps (): void {
+        this.chirps = Chirps;
+    }
+
+    configureAndSetChirp(chirp): void {
+        let num = Math.floor(Math.random() * 10000 );
+        chirp.id = num;
+        chirp.img = "assets/img-thing.jpeg";
+
+        this.chirps.unshift(chirp);
+    }
+
     getChirps(): Promise<IChirp[]> {
         return new Promise<Array<IChirp>>((resolve, reject) => {
             if (this.chirps.length === 0 ){
-             
-                this.chirps = Chirps;
-             
+                this.initializeChirps();
                 resolve(Chirps);
                 return;
             } 
             resolve(this.chirps);
         });
-           
     }
 
     getChirp(id: number): Promise<IChirp> {
         return this.getChirps()
-            .then((chirps) => {
-                return chirps.find(chirp => chirp.id === id);
-            })
-            .then((chirp) => {
-                return chirp;
-            });
+        .then((chirps) => {
+            return chirps.find(chirp => chirp.id === id);
+        })
+        .then((chirp) => {
+            return chirp;
+        });
     }
 }

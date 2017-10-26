@@ -18,11 +18,9 @@ export class AppComponent implements OnInit{
     ) { }
 
 
-  getChirps(): void {
-    this.chirpService.getChirps().then(chirps => this.chirps = chirps);
-  }
+ 
 
   ngOnInit(): void {
-    this.getChirps();
+    this.chirpService.initializeChirps();
   }
 }

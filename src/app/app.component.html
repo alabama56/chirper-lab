@@ -6,7 +6,6 @@
       </button>
       <mat-menu #menu="matMenu">
         <button routerLink="/list" mat-menu-item>Chirps List</button>
-        <button routerLink="/form" mat-menu-item>Send a Chrip</button>
         <button routerLink="/log" mat-menu-item>Sign Up or Log In</button>
       </mat-menu>
   </div>
@@ -14,7 +13,12 @@
     Welcome to {{title}}!
   </h1>
   <div class="login">
-    <mat-icon >send</mat-icon>
+    <button routerLink="/form" mat-icon-button color="accent">
+      <mat-icon >send</mat-icon>
+    </button>
+    <!-- <mat-menu #menu2="matMenu">
+        <button routerLink="/form" mat-menu-item>Send a Chirp</button>
+    </mat-menu>     -->
   </div>
 </mat-toolbar>
 <div class="main" style="text-align:center">

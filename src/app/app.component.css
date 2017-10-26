@@ -1,6 +1,9 @@
 mat-toolbar {
     margin: 0 auto;
     z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 mat-toolbar h1 {
@@ -13,9 +16,9 @@ img {
     margin-bottom: 2em;
 }
 
-/* .main {
-    padding-top: 10px;
-} */
+.main {
+    padding-top: 45px;
+}
 
 .menu {
     color: plum;

@@ -3,4 +3,5 @@ mat-horizontal-stepper {
     margin: 0 auto;
     background-color: #775877;
     margin-bottom: 1em;
+    border-radius: 25px;
 }

@@ -1,23 +1,8 @@
-<!-- <div class="example-container">
-  <mat-form-field>
-    <input #User type="text" matInput placeholder="Name">
-  </mat-form-field>
-  <mat-form-field>
-    <input #UserName type="text" matInput placeholder="User Name">
-  </mat-form-field>
-  <mat-form-field  hintLabel="Must be a number">
-    <input #ID type="number" matInput placeholder="ID #">
-  </mat-form-field>
-  <mat-form-field>
-    <textarea #Message type="text" matInput placeholder="Chirp Message"></textarea>
-  </mat-form-field>
-  <a class="button" id="b" (click)="sendChirp(User.value, UserName.value, ID.value, Message.value)" >Send Chirp!</a>
-  <a class="button" routerLink="/list" routerlinkActive="active">Chirps List</a>
-</div> -->
 
+<h1>Get it off your beak</h1>
 <mat-card>
     <mat-card-title>
-     <h2>Get it off your beak</h2> 
+
     </mat-card-title>
     <form novalidate [formGroup]="form" (ngSubmit)="sendChirp()">
       <mat-form-field>
@@ -41,7 +26,3 @@
     <!-- <p>Value: {{ form.value | json }}</p> -->
   </mat-card>
 
-  <!-- <mat-radio-group formControlName="anon" name="anon">
-      <mat-radio-button color="primary" value="Yes">Yes</mat-radio-button>
-      <mat-radio-button color ="warn" value="No">No</mat-radio-button>      
-    </mat-radio-group> -->

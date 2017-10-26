@@ -21,6 +21,9 @@ import { LogInComponent } from './log-in/log-in.component';
 import { LogInViewComponent } from './log-in-view/log-in-view.component';
 import { ActualLogComponent } from './actual-log/actual-log.component';
 import { ActualLogViewComponent } from './actual-log-view/actual-log-view.component';
+import { UsernamePipe } from './username.pipe';
+import { BackgroundColorDirective } from './background-color.directive';
+import { CreateDirective } from './create.directive';
 
 
 @NgModule({
@@ -35,7 +38,10 @@ import { ActualLogViewComponent } from './actual-log-view/actual-log-view.compon
     LogInComponent,
     LogInViewComponent,
     ActualLogComponent,
-    ActualLogViewComponent
+    ActualLogViewComponent,
+    UsernamePipe,
+    BackgroundColorDirective,
+    CreateDirective
   ],
   imports: [
     AppRoutingModule,

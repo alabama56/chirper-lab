@@ -1,22 +1,27 @@
 <h1>A Little Birdie Told Me... </h1>
-<a *ngFor="let chirp of chirps" [routerLink]="['/single', chirp.id]" >
-  <mat-card class="example-card">
-  <mat-card-header>
-    <img mat-card-avatar src="{{chirp.img}}">
-    <mat-card-title>{{chirp.user}}</mat-card-title>
-    <mat-card-subtitle>@{{chirp.username}}</mat-card-subtitle>
-  </mat-card-header>
+<a *ngFor="let chirp of chirps; let i = index" [routerLink]="['/single', chirp.id]" >
+  <ng-container *appCreate= "250 * i">
+    <mat-card  appBackgroundColor class="example-card">
+      <mat-card-header>
+        <img mat-card-avatar src="{{chirp.img}}">
+        <mat-card-title>{{chirp.user}}</mat-card-title>
+        <mat-card-subtitle>{{chirp.username | username}}</mat-card-subtitle>
+      </mat-card-header>
 
-  
- 
-  <p>{{chirp.message}}</p>
+      
+    
+      <p>{{chirp.message}}</p>
 
-  <mat-card-actions>
-    <button mat-icon-button color="primary">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-</mat-card></a>
+      <mat-card-actions>
+        <button mat-icon-button color="primary">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    
+    </mat-card>
+  </ng-container>
+</a>
+
 <a class="button"routerLink="/log" routerlinkActive="active">Sign in!</a>
 <a class="button"routerLink="/form" routerlinkActive="active">Send a Chirp!</a>

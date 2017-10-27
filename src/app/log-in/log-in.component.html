@@ -72,7 +72,7 @@
 </mat-accordion> -->
 <h1>Sign Up</h1>
  
-<mat-horizontal-stepper [linear]="isLinear">
+<mat-horizontal-stepper appBackgroundColor [linear]="isLinear">
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Name</ng-template>
@@ -99,8 +99,8 @@
         <input #PasswordConfirm type="password" matInput placeholder="Confirm Password">
       </mat-form-field>
       <div>
-        <button color="accent" mat-button matStepperPrevious>Back</button>
-        <button  mat-button matStepperNext>Next</button>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
       </div>
     </form>
   </mat-step>
@@ -112,7 +112,7 @@
       </mat-form-field>
 
       <div>
-        <button color="accent" mat-button matStepperPrevious>Back</button>
+        <button  mat-button matStepperPrevious>Back</button>
         <button  mat-button matStepperNext>Next</button>
       </div>
     </form>

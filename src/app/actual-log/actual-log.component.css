@@ -1,7 +1,10 @@
 mat-horizontal-stepper {
     width: 700px;
     margin: 0 auto;
-    background-color: #775877;
     margin-bottom: 1em;
     border-radius: 25px;
+    border: 2px solid rgb(192, 30, 92);
 }
+mat-horizontal-stepper:hover {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }

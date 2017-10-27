@@ -1,6 +1,6 @@
 <h1>Log In</h1>
 
-<mat-horizontal-stepper [linear]="isLinear">
+<mat-horizontal-stepper appBackgroundColor [linear]="isLinear">
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Name</ng-template>
@@ -24,8 +24,8 @@
       </mat-form-field>
 
       <div>
-        <button color="accent" mat-button matStepperPrevious>Back</button>
-        <button  mat-button matStepperNext>Next</button>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
       </div>
     </form>
   </mat-step>
@@ -33,8 +33,8 @@
   <mat-step>
     <ng-template matStepLabel>Finished</ng-template>
     <div>
-      <button color="accent" mat-button matStepperPrevious>Back</button>
-      <button  mat-button matStepperPrevious>Log In</button>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperPrevious>Log In</button>
     </div>
   </mat-step>
 </mat-horizontal-stepper>

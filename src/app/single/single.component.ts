@@ -2,6 +2,7 @@ import 'rxjs/add/operator/switchMap';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from "@angular/router";
 import { Location } from "@angular/common";
+import { Observable } from 'rxjs/Rx'
 
 import { Chirps, IChirp } from "../data/data";
 import { ChirpService } from '../chirp.service';
@@ -12,7 +13,8 @@ import { ChirpService } from '../chirp.service';
   styleUrls: ['./single.component.css']
 })
 export class SingleComponent implements OnInit {
-  chirp: IChirp;
+  chirp: any;
+
 
   constructor(
     private chirpService: ChirpService,
@@ -22,8 +24,21 @@ export class SingleComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap
-      .switchMap((params: ParamMap) => this.chirpService.getChirp(+params.get('id')))
+      .switchMap((params: ParamMap) => {
+        return Observable.from(this.chirpService.getChirp(params.get('id')))
+      })
       .subscribe(chirp => this.chirp = chirp);
+
+  }
+
+  deleteThis() {
+    console.log("working");
+    this.chirpService.deleteChirp(this.chirp.id)
+    .subscribe(( )=> {
+
+    })
+    
+  
   }
 
   goBack(): void {

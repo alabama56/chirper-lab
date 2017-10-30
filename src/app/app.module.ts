@@ -5,7 +5,7 @@ import { MatFormFieldModule, MatInputModule, MatSelectModule, MatCardModule, Mat
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatExpansionModule, MatRadioModule, MatToolbarModule } from '@angular/material';
 import { MatStepperModule } from '@angular/material';
-
+import { HttpModule } from '@angular/http'
 
 import { ChirpService } from './chirp.service';
 import { AppComponent } from './app.component';
@@ -24,6 +24,8 @@ import { ActualLogViewComponent } from './actual-log-view/actual-log-view.compon
 import { UsernamePipe } from './username.pipe';
 import { BackgroundColorDirective } from './background-color.directive';
 import { CreateDirective } from './create.directive';
+import { AccountInfoComponent } from './account-info/account-info.component';
+import { AccountInfoViewComponent } from './account-info-view/account-info-view.component';
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { CreateDirective } from './create.directive';
     ActualLogViewComponent,
     UsernamePipe,
     BackgroundColorDirective,
-    CreateDirective
+    CreateDirective,
+    AccountInfoComponent,
+    AccountInfoViewComponent
   ],
   imports: [
     AppRoutingModule,
@@ -60,7 +64,8 @@ import { CreateDirective } from './create.directive';
     MatStepperModule,
     ReactiveFormsModule,
     MatRadioModule,
-    MatToolbarModule 
+    MatToolbarModule,
+    HttpModule 
   ],
   providers: [ChirpService],
   bootstrap: [AppComponent]

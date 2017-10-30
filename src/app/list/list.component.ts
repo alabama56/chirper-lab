@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { Chirps, IChirp } from "../data/data";
 import { ChirpService } from '../chirp.service';
+import { ChirpFormComponent } from "../chirp-form/chirp-form.component"
 
 @Component({
   selector: 'app-list',
@@ -10,20 +11,21 @@ import { ChirpService } from '../chirp.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent {
-  chirps: IChirp[];
+  chirps: Array<any>;
   selectedChirp: IChirp;
 
   constructor(
-    private chirpService: ChirpService,
+    private svc: ChirpService,
     private router: Router) { }
 
 
-  getChirps(): void {
-    this.chirpService.getChirps().then(chirps => this.chirps = chirps);
+  
+  ngOnInit(): void {
+    this.svc.getChirps()
+      .subscribe((response) => {
+        this.chirps = response;
+      })
   }
 
-  ngOnInit(): void {
-    this.getChirps();
-  }
 
 }

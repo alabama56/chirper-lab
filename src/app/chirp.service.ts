@@ -1,44 +1,50 @@
 import { Injectable } from "@angular/core";
-import { Chirps, IChirp } from "./data/data";
+import { Http } from '@angular/http';
+import { Observable } from 'rxjs/Rx';
+
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ChirpService {
-    chirps: Array<IChirp> = [];
 
-    constructor() {
+    static api: string ="http://localhost:3000/api/chirps"
+
+    constructor(private http: Http) {
         
     }
 
-    initializeChirps (): void {
-        this.chirps = Chirps;
+    // initializeChirps (): void {
+    //     this.chirps = ;
+    // }
+    deleteChirp(id: string){
+        return this.http.delete(`${ChirpService.api}/${id}`)
+            .map(r => r.text());
+
     }
 
-    configureAndSetChirp(chirp): void {
-        let num = Math.floor(Math.random() * 10000 );
-        chirp.id = num;
-        chirp.img = "assets/img-thing.jpeg";
-
-        this.chirps.unshift(chirp);
+    createChirp(chirp: IChirp) {
+        return this.http.post(ChirpService.api, chirp)
+            .map(r => r.text());
     }
 
-    getChirps(): Promise<IChirp[]> {
-        return new Promise<Array<IChirp>>((resolve, reject) => {
-            if (this.chirps.length === 0 ){
-                this.initializeChirps();
-                resolve(Chirps);
-                return;
-            } 
-            resolve(this.chirps);
-        });
+    getChirps(): Observable<any> {
+        return this.http
+            .get(ChirpService.api)
+            .map(r => r.json())
+            .map(chirps => {
+                return chirps.reverse()
+            });
     }
 
-    getChirp(id: number): Promise<IChirp> {
-        return this.getChirps()
-        .then((chirps) => {
-            return chirps.find(chirp => chirp.id === id);
-        })
-        .then((chirp) => {
-            return chirp;
-        });
+    getChirp(id: string): Observable<any>{
+        return this.http
+            .get(`${ChirpService.api}/${id}`)
+            .map(r => r.json());
     }
+}
+
+export interface IChirp {
+    user: string;
+    id: string;
+    message: string;
 }

@@ -1,9 +1,10 @@
 import { Component, OnInit, Input, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Observable } from 'rxjs/Rx';
 
 
-import { Chirps, IChirp } from "../data/data";
-import { ChirpService } from '../chirp.service';
+
+import { ChirpService, IChirp } from '../chirp.service';
 import { Router } from '@angular/router'
 
 let bottomClick = document.getElementById("b");
@@ -26,7 +27,6 @@ export class ChirpFormComponent implements OnInit {
     private fb: FormBuilder
   ) { this.form = this.fb.group({
     user: ['', Validators.required],
-    username: ['', Validators.required],
     message: ['', Validators.required],
     })
   }
@@ -44,10 +44,12 @@ export class ChirpFormComponent implements OnInit {
       alert("You must fill in all input boxes to send a Chrip");
       this.router.navigate(['/form'])
     }else {
-      
-      this.svc.configureAndSetChirp(this.form.value);
-      this.router.navigate(['/list'])
+      let newChirp = (this.form.value)
+      this.svc.createChirp(newChirp)
+      .subscribe(id => {
+        newChirp.id = id
+        this.router.navigate(['/list'])
+      })
     }
   }
-
 }

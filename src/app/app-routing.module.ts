@@ -9,6 +9,7 @@ import { ListViewComponent } from './list-view/list-view.component';
 import { SingleViewComponent } from './single-view/single-view.component';
 import { LogInViewComponent } from './log-in-view/log-in-view.component';
 import { ActualLogViewComponent } from './actual-log-view/actual-log-view.component';
+import { AccountInfoViewComponent } from './account-info-view/account-info-view.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/form', pathMatch: 'full' },
@@ -16,7 +17,8 @@ const routes: Routes = [
     { path: 'single/:id', component: SingleViewComponent },
     { path: 'list',     component: ListViewComponent },
     { path: 'log',  component: LogInViewComponent },
-    { path: 'actual', component: ActualLogViewComponent }
+    { path: 'actual', component: ActualLogViewComponent },
+    { path: 'account', component: AccountInfoViewComponent}
   ];
 
   @NgModule({

@@ -32,13 +32,9 @@ export class SingleComponent implements OnInit {
   }
 
   deleteThis() {
-    console.log("working");
     this.chirpService.deleteChirp(this.chirp.id)
     .subscribe(( )=> {
-
     })
-    
-  
   }
 
   goBack(): void {

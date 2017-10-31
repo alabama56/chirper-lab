@@ -16,13 +16,13 @@ export class ChirpService {
     // initializeChirps (): void {
     //     this.chirps = ;
     // }
-    deleteChirp(id: string){
+    deleteChirp(id: string): Observable<any> {
         return this.http.delete(`${ChirpService.api}/${id}`)
             .map(r => r.text());
 
     }
 
-    createChirp(chirp: IChirp) {
+    createChirp(chirp: IChirp): Observable<any> {
         return this.http.post(ChirpService.api, chirp)
             .map(r => r.text());
     }
